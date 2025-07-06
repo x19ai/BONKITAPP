@@ -1,0 +1,239 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.tlui-help-menu {
+	display: none !important;
+}
+
+.tlui-debug-panel {
+	display: none !important;
+}
+
+.editor {
+	position: fixed;
+	inset: 0;
+	overflow: hidden;
+}
+
+.tldrawLogo {
+	position: absolute;
+	z-index: 9999999;
+	bottom: 0px;
+	right: 0px;
+}
+
+.tldrawLogo__mobile {
+	bottom: 60px;
+}
+
+.bonkItButton {
+	background: var(--color-primary);
+	color: white;
+	border: none;
+	font: inherit;
+	font-weight: 600;
+	padding: var(--space-3) var(--space-4);
+	border-radius: var(--radius-2);
+	margin: 0;
+	cursor: pointer;
+	pointer-events: all;
+}
+.bonkItButton:hover {
+	opacity: 0.95;
+}
+
+.settingsButton {
+	background: var(--color-panel);
+	color: var(--color-text);
+	border: none;
+	font: inherit;
+	padding: var(--space-3);
+	border-radius: var(--radius-2);
+	margin: 0;
+	cursor: pointer;
+	pointer-events: all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.settingsButton:hover {
+	background: var(--color-hover);
+}
+
+.buttons-container {
+	display: flex;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+.action-buttons {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.social-buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.social-button {
+    background: var(--color-panel);
+    color: var(--color-text);
+    border: none;
+    font: inherit;
+    padding: var(--space-3);
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-button:hover {
+    background: var(--color-hover);
+}
+
+/* ------------------ Api Key Input ----------------- */
+
+.your-own-api-key {
+	position: absolute;
+	bottom: 72px;
+	right: 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999999;
+	color: var(--color-text-0);
+	pointer-events: all;
+}
+
+.your-own-api-key__inner {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	align-items: center;
+	background-color: var(--color-panel);
+	border-radius: 8px;
+	padding: 6px;
+	gap: 13px;
+	pointer-events: all;
+	box-shadow: var(--shadow-2);
+}
+
+.your-own-api-key input {
+	all: unset;
+	padding: 6px 12px;
+	padding-right: 0px;
+	border-radius: 4px;
+	border: 1px solid var(--color-muted);
+	font-size: 12px;
+	background: var(--color-background);
+	width: 100%;
+	height: 32px;
+	font-family: Inter, sans-serif;
+	color: var(--color-text);
+}
+
+.your-own-api-key input::placeholder {
+	color: transparent; /* Hide placeholder when not focused */
+}
+
+.your-own-api-key input:focus::placeholder {
+	color: var(--color-text-3); /* Show placeholder on focus */
+}
+
+.your-own-api-key__mobile {
+	bottom: 108px;
+}
+
+.your-own-api-key__mobile input {
+	font-size: 16px !important;
+}
+
+.input__wrapper {
+	position: relative;
+	flex-grow: 2;
+	margin-right: 0;
+}
+
+/* Show label only when input is empty and not focused */
+.input__wrapper:has(input:placeholder-shown:not(:focus))::after {
+	content: 'Google AI Studio or OpenAI API Key';
+	display: block;
+	position: absolute;
+	inset: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px 12px;
+	z-index: 1;
+	pointer-events: none;
+	color: var(--color-text-3);
+	font-size: 12px;
+	font-family: Inter, sans-serif;
+}
+
+.question__button {
+	all: unset;
+	flex-shrink: 0;
+	width: 36px;
+	height: 36px;
+	background-color: transparent;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: var(--color-text-3);
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.question__button:hover {
+	background-color: var(--color-hover);
+	color: var(--color-text);
+}
+
+.api-key-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.api-key-field {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.api-type-indicator {
+    font-size: 12px;
+    color: #666;
+    padding: 4px 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    display: inline-block;
+}
